@@ -311,7 +311,7 @@ button {
 }
 
 .reason-card {
-  height: 190px;
+  height: 320px;
   perspective: 900px;
   cursor: pointer;
 }
@@ -1072,6 +1072,7 @@ footer,
 }
 
 /* Mobile */
+/* Mobile */
 @media (max-width: 640px) {
   .glass {
     backdrop-filter: blur(16px);
@@ -1079,7 +1080,7 @@ footer,
 
   .navbar {
     top: 10px;
-    width: 94%;
+    width: 95%;
     flex-direction: column;
     justify-content: center;
     padding: 12px 14px;
@@ -1094,8 +1095,21 @@ footer,
   .nav-links {
     width: 100%;
     max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     justify-content: flex-start;
+    gap: 8px;
     font-size: 12px;
+    scrollbar-width: none;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links a {
+    flex-shrink: 0;
   }
 
   .cursor-glow {
@@ -1203,19 +1217,26 @@ footer,
     height: 340px;
   }
 
+  /* 🔥 FIXED REASONS SECTION */
   .reason-grid {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 20px;
     padding: 16px 5% 65px;
   }
 
   .reason-card {
-    height: 172px;
+    height: 320px;
   }
 
   .reason-front,
   .reason-back {
     border-radius: 24px;
+  }
+
+  .reason-back {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 
   .reason-back p,
@@ -1268,8 +1289,9 @@ footer,
     line-height: 1.7;
   }
 
+  /* 🔥 FIXED CAKE SECTION */
   .cake-section {
-    min-height: 500px;
+    min-height: 620px;
     width: 100%;
   }
 
@@ -1286,8 +1308,8 @@ footer,
   }
 
   .cake {
-    margin-bottom: -10px;
-    transform: scale(0.72);
+    margin-bottom: 20px;
+    transform: scale(0.82);
     transform-origin: center top;
   }
 
@@ -1302,7 +1324,6 @@ footer,
     font-size: 13px;
   }
 }
-
 /* Very small phones */
 @media (max-width: 380px) {
   .navbar {
