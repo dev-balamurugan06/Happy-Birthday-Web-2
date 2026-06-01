@@ -983,24 +983,25 @@ footer,
     align-items: center;
   }
 
-  .nav-links {
-    display: flex;
-    gap: 12px;
-    max-width: 70%;
-    overflow-x: auto;
-    padding: 6px 2px 7px;
-    scrollbar-width: none;
-  }
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 100%;
+  justify-content: center;
+  padding: 4px 2px 6px;
+}
 
   .nav-links::-webkit-scrollbar {
     display: none;
   }
 
-  .nav-links a {
-    padding: 8px 12px;
-    border-radius: 999px;
-    background: rgba(255, 255, 255, 0.38);
-  }
+.nav-links a {
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.38);
+  font-size: 12px;
+}
 
   .hero,
   .letter-page {
@@ -1091,12 +1092,14 @@ footer,
     line-height: 1;
   }
 
-  .nav-links {
-    width: 100%;
-    max-width: 100%;
-    justify-content: flex-start;
-    font-size: 12px;
-  }
+.nav-links {
+  width: 100%;
+  max-width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  font-size: 11px;
+}
 
   .cursor-glow {
     display: none;
